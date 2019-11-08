@@ -17,16 +17,16 @@ def for_even(number):
     for i in range(number):
         if i % 2 == 0:
             evens.append(i)
-    return evens
+    return evens[-1]
 
 
 @clock
 def list_comprehension(number):
-    return [i for i in range(number) if i % 2 is 0]
+    return [i for i in range(number) if i % 2 is 0][-1]
 
 
-for_even(10)
-list_comprehension(10)
+for_even(1000)
+list_comprehension(1000)
 
 # [0.00000939s] for_even(10) -> [0, 2, 4, 6, 8]
 # [0.00000227s] list_comprehension(10) -> [0, 2, 4, 6, 8]
